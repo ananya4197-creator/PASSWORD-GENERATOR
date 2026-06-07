@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Modern Password Generator with Dark Mode, Strength Indicator, Clipboard Support, and Glassmorphism UI."
+    />
+
+    <title>Password Generator | Portfolio Project</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Theme Toggle -->
+    <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle Theme"
+    >
+        🌙
+    </button>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h1>Password Generator</h1>
+            <p class="subtitle">
+                Generate secure passwords instantly
+            </p>
+
+            <!-- Password Display -->
+            <div class="password-box">
+
+                <input
+                    type="text"
+                    id="password"
+                    readonly
+                    aria-label="Generated Password"
+                    placeholder="Generate a password"
+                />
+
+                <button
+                    id="copyBtn"
+                    class="copy-btn"
+                    aria-label="Copy Password"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+            <!-- Length -->
+            <div class="setting">
+
+                <div class="setting-header">
+                    <label>Password Length</label>
+                    <span id="lengthValue">12</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="lengthSlider"
+                    min="4"
+                    max="40"
+                    value="12"
+                />
+
+            </div>
+
+            <!-- Options -->
+            <div class="options">
+
+                <label class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked
+                    />
+                    Uppercase Letters
+                </label>
+
+                <label class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked
+                    />
+                    Lowercase Letters
+                </label>
+
+                <label class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked
+                    />
+                    Numbers
+                </label>
+
+                <label class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                        checked
+                    />
+                    Special Characters
+                </label>
+
+            </div>
+
+            <!-- Strength -->
+            <div class="strength-container">
+
+                <span>Password Strength</span>
+
+                <div class="strength-box">
+
+                    <div
+                        id="strengthBar"
+                        class="strength-bar"
+                    ></div>
+
+                </div>
+
+                <span id="strengthText">
+                    Medium
+                </span>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+
+                <button
+                    id="generateBtn"
+                    class="generate-btn"
+                >
+                    Generate Password
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Toast -->
+    <div
+        id="toast"
+        class="toast"
+    >
+        Password Copied!
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
