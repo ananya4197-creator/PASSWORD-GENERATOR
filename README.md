@@ -90,7 +90,7 @@ Contributions, suggestions, and feedback are welcome.
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 creator
 
 **Ananya Kushwaha**
 
